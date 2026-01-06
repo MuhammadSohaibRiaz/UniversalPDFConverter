@@ -1,0 +1,6 @@
+PassengerEnabled On
+PassengerAppRoot /home/rapid/toPdf
+PassengerAppType node
+PassengerStartupFile server.js
+PassengerNodejs /opt/cpanel/ea-nodejs18/bin/node
+

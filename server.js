@@ -14,7 +14,12 @@ app.prepare().then(() => {
     return handle(req, res);
   });
 
+  // For cPanel/Passenger, the server should listen on the port
+  // Passenger will handle the actual HTTP server
   server.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
   });
+}).catch((err) => {
+  console.error('Error starting server:', err);
+  process.exit(1);
 });
